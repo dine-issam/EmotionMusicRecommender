@@ -48,7 +48,7 @@ class _SecondPageState extends State<SecondPage> {
 
   final model = GenerativeModel(
     model: 'gemini-1.5-flash',
-    apiKey: 'AIzaSyCRsZhDX_ehdFHDjihenkODPMAlmaLjT_Q',
+    apiKey: '',// Put your Api 
   );
 // Function to submit mood and genres and fetch playlist
   Future<void> _submitSelections() async {
