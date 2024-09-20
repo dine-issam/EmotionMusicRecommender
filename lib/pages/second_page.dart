@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +49,7 @@ class _SecondPageState extends State<SecondPage> {
 
   final model = GenerativeModel(
     model: 'gemini-1.5-flash',
-    apiKey: '',// Put your Api 
+    apiKey: '${dotenv.env['token']}',
   );
 // Function to submit mood and genres and fetch playlist
   Future<void> _submitSelections() async {
